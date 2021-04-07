@@ -29,7 +29,15 @@ public class ScoreFragment extends Fragment {
         Collections.sort(userArrayList, new Comparator<User>() {
             @Override
             public int compare(User o1, User o2) {
-                return o1.getUserScore().compareTo(o2.getUserScore());
+
+                if(o1.getUserScoreInt() < o2.getUserScoreInt()) return -1;
+                if(o1.getUserScoreInt() > o2.getUserScoreInt()) return 1;
+
+                if(o1.getUserGrade().compareTo(o2.getUserGrade()) > 0) return -1;
+                if(o1.getUserGrade().compareTo(o2.getUserGrade()) < 0) return 1;
+
+
+                return 0;
             }
         });
 
