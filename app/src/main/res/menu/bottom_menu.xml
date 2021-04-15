@@ -14,4 +14,8 @@
         android:id="@+id/menu_score"
         android:title="점수"/>
 
+    <item
+        android:id="@+id/menu_local"
+        android:title="DB"/>
+
 </menu>
